@@ -1,4 +1,4 @@
-# Notjosh Tap
+# notjosh Tap
 
 ## How do I install these formulae?
 
