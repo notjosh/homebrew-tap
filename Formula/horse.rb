@@ -1,14 +1,14 @@
 class Horse < Formula
   desc "Display an animated ASCII art carousel of horsesbr"
   homepage "https://github.com/notjosh/horse"
-  url "https://github.com/notjosh/horse/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "9567dfcba7bb6fd1b95271be95a754391e71ff1a0f97c5248db2d28b144b28c9"
+  url "https://github.com/notjosh/horse/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "443990851a3dbb4eabd916c30bce9b80b1d90027d406a08c66b01b5fa2b12f8e"
 
   bottle do
-    root_url "https://github.com/notjosh/horse/releases/download/v0.3.0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ca5323e6dc3e43df59c5ae94d8552e5e1cf7205099c170d2a46e1432050a472f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "f4c83f7e5ebfe1a8a271dd6146647910eeb5b05f3b6e02c97be26e9ad8ec0ba0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "c16b70bbdfdf58c51fd43c28fe83e1eb92192daf81ae3e1d5dd6a6270f8d638c"
+    root_url "https://github.com/notjosh/horse/releases/download/v0.3.1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "86e8b5368963efe3ba7857be8858e83d31dcb89395bc476df15cf767b15f09e0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a6aba9bb411aa4f46ba3a04fd8a9f51f44ac7e75006d576725bdecfbf96a0475"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "fe9638354e9cd2bc3c941cd40497a919b4138b935f4a176a305cfaa9e1098b18"
   end
 
   depends_on "rust" => :build
@@ -19,6 +19,6 @@ class Horse < Formula
   end
 
   test do
-    assert_predicate bin/"horse", :exist?
+    assert_path_exists bin/"horse"
   end
 end
